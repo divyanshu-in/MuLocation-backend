@@ -1,0 +1,1 @@
+web: java -jar build/libs/com.divyanshu_in.ktor-tutorial-0.0.1.jar

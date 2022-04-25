@@ -33,9 +33,8 @@ dependencies {
     implementation("io.ktor:ktor-client-gson:$ktor_version")
     implementation("io.ktor:ktor-client-cio:$ktor_version")
 
+}
 
-
-
-
-
+tasks {
+    create("stage").dependsOn("installDist")
 }
