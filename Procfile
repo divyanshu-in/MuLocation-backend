@@ -1,1 +1,1 @@
-web: java -jar build/libs/com.divyanshu_in.ktor-tutorial-0.0.1.jar
+web: java -jar build/install/com.divyanshu_in.ktor-tutorial/bin/com.divyanshu_in.ktor-tutorial
