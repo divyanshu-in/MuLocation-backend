@@ -19,6 +19,10 @@ application {
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
 
+tasks {
+    create("stage").dependsOn("installDist")
+}
+
 repositories {
     mavenCentral()
     maven { url = uri("https://maven.pkg.jetbrains.space/public/p/ktor/eap") }
@@ -33,8 +37,4 @@ dependencies {
     implementation("io.ktor:ktor-client-gson:$ktor_version")
     implementation("io.ktor:ktor-client-cio:$ktor_version")
 
-}
-
-tasks {
-    create("stage").dependsOn("installDist")
 }
