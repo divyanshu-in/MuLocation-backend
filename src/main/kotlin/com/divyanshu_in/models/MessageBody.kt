@@ -7,9 +7,17 @@ data class MessageBody(
     val long: Double? = null,
     val username: String? = null,
     val msg_type: MessageType = MessageType.LOCATION_MSG,
-    val message: String? = null
+    val message: String? = null,
+    val markerDetails: MarkerDetails? = null
 )
 
-enum class MessageType{
-    LOCATION_MSG, GENERAL_MSG
+@Suppress("PLUGIN_IS_NOT_ENABLED")
+@kotlinx.serialization.Serializable
+data class MarkerDetails(
+    val title: String,
+    val colorHue: Float
+)
+
+enum class MessageType {
+    LOCATION_MSG, GENERAL_MSG, MARKER_MSG
 }
