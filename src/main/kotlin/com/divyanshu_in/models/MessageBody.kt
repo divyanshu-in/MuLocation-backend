@@ -14,9 +14,17 @@ data class MessageBody(
 @Suppress("PLUGIN_IS_NOT_ENABLED")
 @kotlinx.serialization.Serializable
 data class MarkerDetails(
+    val markerId: String,
     val title: String,
-    val colorHue: Float
+    val colorHue: Float,
+    val lat: Double,
+    val long: Double,
+    val action: MarkerAction = MarkerAction.ADD
 )
+
+enum class MarkerAction {
+    DELETE, ADD, UPDATE
+}
 
 enum class MessageType {
     LOCATION_MSG, GENERAL_MSG, MARKER_MSG
